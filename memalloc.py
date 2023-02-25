@@ -142,7 +142,7 @@ for i in range (0, extra_qtt_accesses):
 		mem_array[oldest_page_pos] = oldest_page_pos * page_size
 
 #save the final array to file
-with open('memaddressalloc.c', 'w') as f:
+with open('mem_array.c', 'w') as f:
 	#(c file can be incorporated into the main code --> faster than reading from file)
 	for i in range (0, qtt_mem_pages):
 		if i == 0:
