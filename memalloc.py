@@ -146,11 +146,11 @@ with open('mem_array.c', 'w') as f:
 	#(c file can be incorporated into the main code --> faster than reading from file)
 	for i in range (0, qtt_mem_pages):
 		if i == 0:
-			f.write("long *mem_addr_array = ("+str(mem_array[i])+", ")
+			f.write("long mem_addr_array[] = {"+str(mem_array[i])+", ")
 		if i > 0 and i < qtt_mem_pages-1:
 			f.write(str(mem_array[i])+", ")
 		if i == qtt_mem_pages-1:
-			f.write(str(mem_array[i])+");")
+			f.write(str(mem_array[i])+"};")
 
 print ("\nTimestamp after swap mechanism")
 print (timestamp_array)
