@@ -5,7 +5,7 @@ import numpy as np
 memory_heap_size = 262144 #total memory size
 memory_heap_mmap = 131027 #196563 #65536 #mapped mem size
 page_size = 4096
-percent_page_fault = int(sys.argv[1])
+percent_page_fault = 70
 
 #depending on memory alloc, set max pages that can be mapped or not mapped
 mem_mapped = memory_heap_mmap
